@@ -7,7 +7,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:'Inter',sans-serif;
+  font-family:"Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
   color:var(--text);
   background:#ffffff;
   line-height:1.7;
@@ -25,8 +25,8 @@ img{max-width:100%;display:block}
   -webkit-backdrop-filter:blur(12px);
 }
 .glass-header{
-  background:#ffffff;
-  border-bottom:1px solid #e6e6e6;
+  background:#f5f7fa;
+  border-bottom:1px solid rgba(0,0,0,.05);
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
 }
@@ -36,18 +36,18 @@ img{max-width:100%;display:block}
   gap:14px;
 }
 .logo{
-  width:46px;
-  height:46px;
+  width:51px;
+  height:51px;
   object-fit:contain;
 }
 .company{
-  font-size:20px;
+  font-size:24px;
   font-weight:600;
-  color:var(--navy);
+  color:#8F8F8F;
   letter-spacing:-0.02em;
 }
 nav a{
-  color:var(--navy);
+  color:#8F8F8F;
   text-decoration:none;
   font-weight:600;
   margin-left:26px;
@@ -58,7 +58,7 @@ nav a:hover{opacity:.72}
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  background:linear-gradient(180deg,#ffffff 0%, #f3f6fb 100%);
+  background:linear-gradient(180deg,#ffffff 0%, #f3f5f7 100%);
 }
 .landing-hero{
   flex:1;
@@ -70,21 +70,20 @@ nav a:hover{opacity:.72}
 }
 .landing-center{max-width:860px}
 .landing-logo{
-  width:180px;
+  width:264px;
   margin:0 auto 28px;
 }
 .landing-center h1{
   margin:0 0 12px;
-  font-size:clamp(28px,4vw,52px);
-  letter-spacing:.06em;
-  font-weight:500;
-  color:#111111;
-  white-space:nowrap;
+  font-size:clamp(40px,6vw,78px);
+  letter-spacing:.14em;
+  font-weight:300;
+  color:#8F8F8F;
 }
 .landing-center p{
   margin:0 0 34px;
   font-size:clamp(20px,2.6vw,28px);
-  color:#5b6472;
+  color:#39B54A;
   font-weight:300;
 }
 .language-buttons{
@@ -109,13 +108,14 @@ nav a:hover{opacity:.72}
   box-shadow:0 18px 35px rgba(10,35,66,.12);
 }
 .btn-primary{
-  background:var(--navy);
-  color:#fff;
+  background:#c69c6d;
+  color:#ffffff;
+  border:1px solid #c69c6d;
 }
 .btn-outline{
-  border:1.5px solid rgba(10,35,66,.25);
-  color:var(--navy);
-  background:#fff;
+  background:#c69c6d;
+  color:#ffffff;
+  border:1px solid #c69c6d;
 }
 .landing-footer,.site-footer{
   text-align:center;
@@ -152,8 +152,8 @@ nav a:hover{opacity:.72}
   margin:0 0 16px;
   font-size:clamp(38px,5vw,60px);
   line-height:1.1;
-  color:var(--navy);
-  text-shadow:0 4px 24px rgba(255,255,255,.35);
+  color:#39B54A;
+  text-shadow:0 4px 24px rgba(255,255,255,.25);
 }
 .hero-content p{
   margin:0 auto;
@@ -253,14 +253,25 @@ nav a:hover{opacity:.72}
     flex-direction:column;
     gap:12px;
   }
-  .company{font-size:18px}
+  .company{
+  font-size:24px;
+  font-weight:600;
+  color:#8F8F8F;
+  letter-spacing:-0.02em;
+}
   nav{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:14px 18px;
   }
-  nav a{margin-left:0}
+  nav a{
+  color:#8F8F8F;
+  text-decoration:none;
+  font-weight:600;
+  margin-left:26px;
+  transition:opacity .25s ease;
+}
   .section-image,.contact-section{
   padding:90px 7%;
   background:linear-gradient(180deg,#ffffff 0%, #f5f7fb 100%);
@@ -282,11 +293,14 @@ nav a:hover{opacity:.72}
 }
 }
 @media (max-width: 640px){
-  .landing-logo{width:136px}
+  .landing-logo{width:160px}
   .landing-center h1{
-    letter-spacing:.03em;
-    white-space:normal;
-  }
+  margin:0 0 12px;
+  font-size:clamp(40px,6vw,78px);
+  letter-spacing:.14em;
+  font-weight:300;
+  color:#8F8F8F;
+}
   .hero-banner{min-height:420px}
   .section-image{
     min-height:auto;
@@ -294,10 +308,15 @@ nav a:hover{opacity:.72}
     padding-bottom:56px;
   }
   .logo{
-    width:40px;
-    height:40px;
+    width:44px;
+    height:44px;
   }
-  .company{font-size:16px}
+  .company{
+  font-size:24px;
+  font-weight:600;
+  color:#8F8F8F;
+  letter-spacing:-0.02em;
+}
   .hero-content p,.section-content p,.contact-text p{font-size:16px}
 }
 
@@ -313,10 +332,27 @@ nav a:hover{opacity:.72}
   animation:fadeUpSoft .9s ease forwards;
 }
 
-.landing-center h1{ animation-delay:.12s; }
-.landing-center p{ animation-delay:.24s; }
+.landing-center h1{
+  margin:0 0 12px;
+  font-size:clamp(40px,6vw,78px);
+  letter-spacing:.14em;
+  font-weight:300;
+  color:#8F8F8F;
+}
+.landing-center p{
+  margin:0 0 34px;
+  font-size:clamp(20px,2.6vw,28px);
+  color:#39B54A;
+  font-weight:300;
+}
 .language-buttons{ animation-delay:.36s; }
-.hero-content h1{ animation-delay:.1s; }
+.hero-content h1{
+  margin:0 0 16px;
+  font-size:clamp(38px,5vw,60px);
+  line-height:1.1;
+  color:#39B54A;
+  text-shadow:0 4px 24px rgba(255,255,255,.25);
+}
 .hero-content p{ animation-delay:.24s; }
 .landing-logo{ animation-delay:0s; }
 
@@ -338,7 +374,11 @@ nav a:hover{opacity:.72}
 }
 
 nav a{
-  position:relative;
+  color:#8F8F8F;
+  text-decoration:none;
+  font-weight:600;
+  margin-left:26px;
+  transition:opacity .25s ease;
 }
 
 nav a::after{
@@ -389,4 +429,166 @@ nav a:hover::after{
   .hero-main{
     background-attachment:scroll;
   }
+}
+
+
+/* ===== Services readability fix ===== */
+.services-section .section-overlay{
+  background:linear-gradient(180deg, rgba(8,22,42,.42), rgba(8,22,42,.56));
+}
+
+.services-section .section-content{
+  background:rgba(10,35,66,.92);
+}
+
+.services-section .section-content h2,
+.services-section .section-content p{
+  color:#ffffff;
+  text-shadow:0 2px 10px rgba(0,0,0,.18);
+}
+
+@media (max-width: 640px){
+  .services-section{
+    background-position:center center;
+  }
+
+  .services-section .section-overlay{
+    background:linear-gradient(180deg, rgba(8,22,42,.58), rgba(8,22,42,.72));
+  }
+
+  .services-section .section-content{
+    background:rgba(10,35,66,.96);
+    border:1px solid rgba(255,255,255,.08);
+  }
+
+  .services-section .section-content h2{
+    font-size:24px;
+  }
+
+  .services-section .section-content p{
+    font-size:15px;
+    line-height:1.7;
+  }
+}
+
+
+/* ===== Color customization v11 ===== */
+.about-section .section-content h2{
+  color:#1596FF;
+}
+
+.services-section .section-content h2{
+  color:#C69C6D;
+}
+
+.contact-text h2{
+  color:#8F8F8F;
+}
+
+
+/* ===== Index wordmark refinement v12 ===== */
+.landing-wordmark{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin:0 0 12px;
+  line-height:1;
+}
+
+.mundo-line{
+  font-size:clamp(40px,6vw,78px);
+  letter-spacing:.14em;
+  font-weight:300;
+  color:#8F8F8F;
+}
+
+.international-line{
+  margin-top:4px;
+  font-size:clamp(24px,3vw,44px);
+  letter-spacing:.16em;
+  font-weight:300;
+  color:#8F8F8F;
+  text-transform:none;
+}
+
+.landing-center p{
+  color:#1596FF !important;
+}
+
+.btn-primary{
+  background:#39B54A !important;
+  color:#ffffff;
+  border:1px solid #39B54A !important;
+}
+
+@media (max-width: 640px){
+  .landing-wordmark{
+    margin-bottom:10px;
+  }
+  .mundo-line{
+    font-size:clamp(24px,8vw,40px);
+    letter-spacing:.08em;
+  }
+  .international-line{
+    margin-top:2px;
+    font-size:clamp(14px,5vw,22px);
+    letter-spacing:.12em;
+  }
+}
+
+
+/* ===== Index wordmark image + logo shine v13 ===== */
+.index-wordmark{
+  width:min(92vw, 350px);
+  margin:0 auto 14px;
+}
+
+.landing-logo-wrap{
+  position:relative;
+  display:inline-block;
+}
+
+.landing-logo{
+  width:264px;
+  position:relative;
+  z-index:1;
+}
+
+.landing-logo-wrap::after{
+  content:"";
+  position:absolute;
+  top:-12%;
+  left:-45%;
+  width:42%;
+  height:124%;
+  background:linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.18) 38%, rgba(255,255,255,.78) 50%, rgba(255,255,255,.18) 62%, rgba(255,255,255,0) 100%);
+  transform:skewX(-22deg);
+  filter:blur(2px);
+  animation:logoShine 3.6s ease-in-out infinite;
+  z-index:2;
+  pointer-events:none;
+}
+
+@keyframes logoShine{
+  0%{ left:-55%; opacity:0; }
+  8%{ opacity:1; }
+  32%{ left:115%; opacity:.95; }
+  40%{ opacity:0; }
+  100%{ left:115%; opacity:0; }
+}
+
+@media (max-width: 640px){
+  .index-wordmark{
+    width:min(94vw, 210px);
+    margin-bottom:10px;
+  }
+}
+
+
+.brand-link{
+  text-decoration:none;
+  color:inherit;
+}
+.brand-link:hover{
+  opacity:.92;
 }
